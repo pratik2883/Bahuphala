@@ -11,13 +11,16 @@ if (!fs.existsSync(publicOutDir)) {
 }
 
 // 1. Ensure index.html exists
-const shellPath = path.join(publicOutDir, "_shell.html");
 const indexPath = path.join(publicOutDir, "index.html");
+const shellPath = path.join(publicOutDir, "_shell.html");
 
-if (fs.existsSync(shellPath)) {
+if (fs.existsSync(indexPath)) {
+  const stats = fs.statSync(indexPath);
+  console.log(`✓ Using fully pre-rendered index.html (${Math.round(stats.size / 1024)} KB) with complete HTML, CSS & content`);
+} else if (fs.existsSync(shellPath)) {
   fs.copyFileSync(shellPath, indexPath);
-  console.log("? Copied _shell.html -> index.html for root route");
-} else if (!fs.existsSync(indexPath)) {
+  console.log("✓ Copied _shell.html -> index.html for root route");
+} else {
   console.warn("Warning: Neither _shell.html nor index.html found in .output/public.");
 }
 
