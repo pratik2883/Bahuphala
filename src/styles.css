@@ -1,0 +1,156 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Bahuphala — Corporate Engineering Design System
+ * Palette: Navy Blue, White, Steel Gray.
+ * Clean, professional, strict grid alignments. No playful UI.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  /* Brand tokens */
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-navy-light: var(--navy-light);
+  --color-steel: var(--steel);
+  --color-steel-light: var(--steel-light);
+  --color-steel-surface: var(--steel-surface);
+
+  --font-display: "Sora", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --chart-1: var(--navy);
+  --chart-2: var(--steel);
+  --chart-3: var(--navy-light);
+  --chart-4: oklch(0.6 0.06 200);
+  --chart-5: oklch(0.7 0.05 220);
+
+  --color-sidebar: var(--navy);
+  --color-sidebar-foreground: oklch(0.984 0.003 247.858);
+  --color-sidebar-primary: var(--navy-light);
+  --color-sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --color-sidebar-accent: var(--navy-deep);
+  --color-sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --color-sidebar-border: oklch(1 0 0 / 12%);
+  --color-sidebar-ring: var(--navy-light);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Surfaces */
+  --background: oklch(1 0 0); /* white */
+  --foreground: oklch(0.22 0.03 258); /* deep navy-charcoal text */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 258);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.03 258);
+
+  /* Brand: Navy Blue */
+  --navy: oklch(0.33 0.07 258); /* #14305c corporate navy */
+  --navy-deep: oklch(0.23 0.06 258); /* #0a1f44 deep navy */
+  --navy-light: oklch(0.45 0.08 258); /* #1e4380 */
+
+  /* Steel Gray */
+  --steel: oklch(0.55 0.02 257); /* slate/steel */
+  --steel-light: oklch(0.72 0.015 250);
+  --steel-surface: oklch(0.965 0.005 250); /* very light steel surface */
+
+  --primary: var(--navy);
+  --primary-foreground: oklch(0.98 0.002 247.86);
+  --secondary: var(--steel-surface);
+  --secondary-foreground: var(--navy);
+  --muted: var(--steel-surface);
+  --muted-foreground: var(--steel);
+  --accent: var(--steel-surface);
+  --accent-foreground: var(--navy);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.9 0.008 250);
+  --input: oklch(0.9 0.008 250);
+  --ring: var(--navy-light);
+}
+
+.dark {
+  --background: var(--navy-deep);
+  --foreground: oklch(0.97 0.005 250);
+  --card: oklch(0.28 0.05 258);
+  --card-foreground: oklch(0.97 0.005 250);
+  --popover: oklch(0.28 0.05 258);
+  --popover-foreground: oklch(0.97 0.005 250);
+  --primary: var(--navy-light);
+  --primary-foreground: oklch(0.15 0.05 258);
+  --secondary: oklch(0.34 0.04 258);
+  --secondary-foreground: oklch(0.97 0.005 250);
+  --muted: oklch(0.34 0.04 258);
+  --muted-foreground: oklch(0.75 0.015 250);
+  --accent: oklch(0.34 0.04 258);
+  --accent-foreground: oklch(0.97 0.005 250);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.97 0.005 250);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--navy-light);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility hero-grid-overlay {
+  background-image:
+    linear-gradient(var(--steel-surface) 1px, transparent 1px),
+    linear-gradient(90deg, var(--steel-surface) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@utility navy-gradient {
+  background-image: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-light) 100%);
+}
