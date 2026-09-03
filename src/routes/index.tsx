@@ -82,7 +82,8 @@ function Index() {
         <div className="hero-grid-overlay absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-28">
           <div>
-            <span className="inline-flex items-center rounded-full border border-navy/20 bg-navy/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-navy">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-leaf/40 bg-leaf-subtle px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-navy">
+              <span className="h-1.5 w-1.5 rounded-full bg-leaf"></span>
               Structural Engineering & Analysis
             </span>
             <h1 className="mt-6 font-display text-4xl font-bold leading-tight tracking-tight text-navy sm:text-5xl lg:text-6xl">
@@ -97,7 +98,7 @@ function Index() {
               <Button
                 asChild
                 size="lg"
-                className="bg-navy text-white hover:bg-navy-deep"
+                className="bg-navy text-white hover:bg-navy-deep shadow-md"
               >
                 <Link to="/services">
                   View Our Services
@@ -147,9 +148,9 @@ function Index() {
             {RELIABILITY_POINTS.map((point) => (
               <div
                 key={point}
-                className="flex items-center gap-3 rounded-lg border border-border bg-card p-5"
+                className="flex items-center gap-3 rounded-lg border border-border bg-card p-5 shadow-sm"
               >
-                <CheckCircle2 className="h-5 w-5 shrink-0 text-navy" />
+                <CheckCircle2 className="h-5 w-5 shrink-0 text-leaf" />
                 <span className="text-sm font-medium text-foreground">
                   {point}
                 </span>
@@ -163,7 +164,8 @@ function Index() {
       <section className="bg-background">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center rounded-full border border-navy/20 bg-navy/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-navy">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-leaf/40 bg-leaf-subtle px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-navy">
+              <span className="h-1.5 w-1.5 rounded-full bg-leaf"></span>
               What We Do
             </span>
             <h2 className="mt-6 font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">

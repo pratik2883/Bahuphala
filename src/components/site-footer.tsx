@@ -23,12 +23,14 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2.5">
-              <span className="font-display text-xl font-bold tracking-tight">
-                Bahuphala
-              </span>
+            <div className="flex items-center">
+              <img
+                src="/logo-white.png"
+                alt="Bahuphala Ventures Pvt. Ltd."
+                className="h-12 w-auto object-contain"
+              />
             </div>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/75">
               Expert structural engineering & analysis services. Precision
               CAD drafting, FEA, and CFD solutions delivered on time, every time.
             </p>
@@ -74,7 +76,7 @@ export function SiteFooter() {
             </h3>
             <ul className="mt-4 space-y-3.5">
               <li className="flex items-start gap-3 text-sm text-white/70">
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-white/60" />
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-leaf" />
                 <a
                   href="mailto:skd@bahuphala.com"
                   className="transition-colors hover:text-white"
@@ -83,16 +85,16 @@ export function SiteFooter() {
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/70">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-white/60" />
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-leaf" />
                 <a
-                  href="tel:+919756131050"
+                  href="tel:+919657131050"
                   className="transition-colors hover:text-white"
                 >
-                  +91 97561 31050
+                  +91 96571 31050
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/70">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-white/60" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-leaf" />
                 <span>Pune & Nashik, Maharashtra</span>
               </li>
             </ul>
@@ -101,7 +103,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-6 sm:flex-row">
           <p className="text-xs text-white/60">
-            © {new Date().getFullYear()} Bahuphala. All rights reserved.
+            © {new Date().getFullYear()} Bahuphala Ventures Pvt. Ltd. All rights reserved.
           </p>
           <p className="text-xs text-white/60">
             Structural Engineering & Analysis Services

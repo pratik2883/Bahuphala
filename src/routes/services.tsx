@@ -13,13 +13,13 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Bahuphala" },
+      { title: "Services — Bahuphala Ventures" },
       {
         name: "description",
         content:
-          "Bahuphala services: Structural 2D/3D Drafting, FEA, CFD, Steel Detailing, and Technical Manpower Sourcing — precise engineering execution, delivered on time.",
+          "Bahuphala Ventures services: Structural 2D/3D Drafting, FEA, CFD, Steel Detailing, and Technical Manpower Sourcing — precise engineering execution, delivered on time.",
       },
-      { property: "og:title", content: "Services — Bahuphala" },
+      { property: "og:title", content: "Services — Bahuphala Ventures" },
       {
         property: "og:description",
         content:
@@ -135,7 +135,8 @@ function ServicesPage() {
       <section className="relative overflow-hidden border-b border-border bg-background">
         <div className="hero-grid-overlay absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-          <span className="inline-flex items-center rounded-full border border-navy/20 bg-navy/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-navy">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-leaf/40 bg-leaf-subtle px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-navy">
+            <span className="h-1.5 w-1.5 rounded-full bg-leaf"></span>
             Our Services
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-navy sm:text-5xl">
@@ -202,7 +203,7 @@ function ServicesPage() {
                           key={item}
                           className="flex items-start gap-2.5 text-sm text-foreground"
                         >
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-navy" />
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-leaf" />
                           {item}
                         </li>
                       ))}

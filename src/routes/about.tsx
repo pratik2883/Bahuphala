@@ -14,13 +14,13 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Bahuphala" },
+      { title: "About Us — Bahuphala Ventures" },
       {
         name: "description",
         content:
-          "Bahuphala is an engineering extension team based in Pune & Nashik, Maharashtra — precise CAD drafting, FEA, and CFD with clear communication and strict deadlines.",
+          "Bahuphala Ventures is an engineering extension team based in Pune & Nashik, Maharashtra — precise CAD drafting, FEA, and CFD with clear communication and strict deadlines.",
       },
-      { property: "og:title", content: "About Us — Bahuphala" },
+      { property: "og:title", content: "About Us — Bahuphala Ventures" },
       {
         property: "og:description",
         content:
@@ -50,18 +50,18 @@ const VALUES = [
     icon: MessagesSquare,
     title: "Clear Communication",
     description:
-      "Structured updates at every stage. You always know what is done, what is next, and what needs your input.",
+      "Regular updates, transparent progress tracking, and direct access to the engineers working on your project.",
   },
   {
     icon: FileCheck,
-    title: "Fabrication-Ready Output",
+    title: "Standards Compliance",
     description:
-      "Documentation that downstream teams can build from without rework, RFIs, or guesswork.",
+      "Familiar with AISC, Eurocode, IS, and ASME standards. Every deliverable meets the codes you specify.",
   },
 ] as const;
 
 const CAPABILITIES = [
-  "Structural 2D & 3D CAD drafting",
+  "Structural 2D & 3D Drafting (Revit, AutoCAD)",
   "Finite Element Analysis (FEA)",
   "Computational Fluid Dynamics (CFD)",
   "Structural steel detailing & BOMs",
@@ -76,14 +76,15 @@ function AboutPage() {
       <section className="relative overflow-hidden border-b border-border bg-background">
         <div className="hero-grid-overlay absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-          <span className="inline-flex items-center rounded-full border border-navy/20 bg-navy/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-navy">
-            About Bahuphala
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-leaf/40 bg-leaf-subtle px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-navy">
+            <span className="h-1.5 w-1.5 rounded-full bg-leaf"></span>
+            About Bahuphala Ventures
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-bold leading-tight tracking-tight text-navy sm:text-5xl">
             An Engineering Extension Team You Can Build On.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-steel">
-            Bahuphala supports product development and structural programs with
+            Bahuphala Ventures supports product development and structural programs with
             precise CAD drafting, FEA, and CFD solutions — acting as a seamless
             extension of your in-house engineering team.
           </p>

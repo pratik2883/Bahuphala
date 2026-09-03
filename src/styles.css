@@ -6,8 +6,8 @@
 
 /*
  * Bahuphala — Corporate Engineering Design System
- * Palette: Navy Blue, White, Steel Gray.
- * Clean, professional, strict grid alignments. No playful UI.
+ * Palette: Rich Logo Brown (#3C2313), Fresh Leaf Green (#8DC63F), Warm Sand/Ivory.
+ * Clean, professional, strict grid alignments.
  */
 
 @theme inline {
@@ -40,89 +40,97 @@
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
 
-  /* Brand tokens */
+  /* Brand tokens - Bahuphala Brown & Leaf Green */
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
   --color-navy-light: var(--navy-light);
   --color-steel: var(--steel);
   --color-steel-light: var(--steel-light);
   --color-steel-surface: var(--steel-surface);
+  --color-leaf: var(--leaf);
+  --color-leaf-hover: var(--leaf-hover);
+  --color-leaf-subtle: var(--leaf-subtle);
 
   --font-display: "Sora", sans-serif;
   --font-sans: "Inter", sans-serif;
 
   --chart-1: var(--navy);
-  --chart-2: var(--steel);
+  --chart-2: var(--leaf);
   --chart-3: var(--navy-light);
-  --chart-4: oklch(0.6 0.06 200);
-  --chart-5: oklch(0.7 0.05 220);
+  --chart-4: var(--steel);
+  --chart-5: #a99d95;
 
   --color-sidebar: var(--navy);
   --color-sidebar-foreground: oklch(0.984 0.003 247.858);
-  --color-sidebar-primary: var(--navy-light);
-  --color-sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --color-sidebar-primary: var(--leaf);
+  --color-sidebar-primary-foreground: #ffffff;
   --color-sidebar-accent: var(--navy-deep);
   --color-sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --color-sidebar-border: oklch(1 0 0 / 12%);
-  --color-sidebar-ring: var(--navy-light);
+  --color-sidebar-border: rgba(255, 255, 255, 0.12);
+  --color-sidebar-ring: var(--leaf);
 }
 
 :root {
   --radius: 0.5rem;
 
   /* Surfaces */
-  --background: oklch(1 0 0); /* white */
-  --foreground: oklch(0.22 0.03 258); /* deep navy-charcoal text */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.03 258);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.03 258);
+  --background: #ffffff;
+  --foreground: #28170c; /* Deep warm coffee brown text */
+  --card: #ffffff;
+  --card-foreground: #28170c;
+  --popover: #ffffff;
+  --popover-foreground: #28170c;
 
-  /* Brand: Navy Blue */
-  --navy: oklch(0.33 0.07 258); /* #14305c corporate navy */
-  --navy-deep: oklch(0.23 0.06 258); /* #0a1f44 deep navy */
-  --navy-light: oklch(0.45 0.08 258); /* #1e4380 */
+  /* Brand: Earth & Coffee Brown (Exact match with Bahuphala Logo) */
+  --navy: #3c2313; /* Primary Logo Deep Brown */
+  --navy-deep: #24140a; /* Darkest Espresso */
+  --navy-light: #58351d; /* Warm Chestnut Brown */
 
-  /* Steel Gray */
-  --steel: oklch(0.55 0.02 257); /* slate/steel */
-  --steel-light: oklch(0.72 0.015 250);
-  --steel-surface: oklch(0.965 0.005 250); /* very light steel surface */
+  /* Brand: Leaf Green (Exact match with Bahuphala Logo Leaves) */
+  --leaf: #8dc63f; /* Vibrant Leaf Green */
+  --leaf-hover: #7cb534;
+  --leaf-subtle: #f2f8ea; /* Soft light green tint */
+
+  /* Neutral Warm Taupe & Sand */
+  --steel: #6e5f55; /* Slate taupe for secondary copy */
+  --steel-light: #a99d95;
+  --steel-surface: #faf7f2; /* Warm luxury ivory/sand surface */
 
   --primary: var(--navy);
-  --primary-foreground: oklch(0.98 0.002 247.86);
+  --primary-foreground: #ffffff;
   --secondary: var(--steel-surface);
   --secondary-foreground: var(--navy);
   --muted: var(--steel-surface);
   --muted-foreground: var(--steel);
-  --accent: var(--steel-surface);
+  --accent: var(--leaf-subtle);
   --accent-foreground: var(--navy);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.9 0.008 250);
-  --input: oklch(0.9 0.008 250);
-  --ring: var(--navy-light);
+  --destructive-foreground: #ffffff;
+  --border: #e8e1d7; /* Warm sand border */
+  --input: #e8e1d7;
+  --ring: var(--leaf);
 }
 
 .dark {
-  --background: var(--navy-deep);
-  --foreground: oklch(0.97 0.005 250);
-  --card: oklch(0.28 0.05 258);
-  --card-foreground: oklch(0.97 0.005 250);
-  --popover: oklch(0.28 0.05 258);
-  --popover-foreground: oklch(0.97 0.005 250);
-  --primary: var(--navy-light);
-  --primary-foreground: oklch(0.15 0.05 258);
-  --secondary: oklch(0.34 0.04 258);
-  --secondary-foreground: oklch(0.97 0.005 250);
-  --muted: oklch(0.34 0.04 258);
-  --muted-foreground: oklch(0.75 0.015 250);
-  --accent: oklch(0.34 0.04 258);
-  --accent-foreground: oklch(0.97 0.005 250);
+  --background: #180e07;
+  --foreground: #f7f2ed;
+  --card: #23150b;
+  --card-foreground: #f7f2ed;
+  --popover: #23150b;
+  --popover-foreground: #f7f2ed;
+  --primary: var(--leaf);
+  --primary-foreground: #180e07;
+  --secondary: #301d11;
+  --secondary-foreground: #f7f2ed;
+  --muted: #301d11;
+  --muted-foreground: #a99d95;
+  --accent: #301d11;
+  --accent-foreground: #f7f2ed;
   --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.97 0.005 250);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: var(--navy-light);
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.12);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: var(--leaf);
 }
 
 @layer base {
@@ -152,5 +160,6 @@
 }
 
 @utility navy-gradient {
-  background-image: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-light) 100%);
+  background-image: linear-gradient(135deg, #24140a 0%, #3c2313 55%, #52311b 100%);
 }
+

@@ -81,16 +81,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Bahuphala — Structural Engineering & Analysis Services" },
+      { title: "Bahuphala Ventures — Structural Engineering & Analysis Services" },
       {
         name: "description",
         content:
-          "Bahuphala delivers expert structural engineering & analysis: 2D/3D CAD drafting, FEA, and CFD solutions with precision and on-time delivery.",
+          "Bahuphala Ventures delivers expert structural engineering & analysis: 2D/3D CAD drafting, FEA, and CFD solutions with precision and on-time delivery.",
       },
-      { name: "author", content: "Bahuphala" },
+      { name: "author", content: "Bahuphala Ventures Pvt. Ltd." },
       {
         property: "og:title",
-        content: "Bahuphala — Structural Engineering & Analysis Services",
+        content: "Bahuphala Ventures — Structural Engineering & Analysis Services",
       },
       {
         property: "og:description",
@@ -108,14 +108,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "preconnect",
         href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous",
       },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap",
       },
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,

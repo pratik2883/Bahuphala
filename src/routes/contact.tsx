@@ -6,17 +6,17 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — Bahuphala" },
+      { title: "Contact Us — Bahuphala Ventures" },
       {
         name: "description",
         content:
-          "Contact Bahuphala for structural engineering, CAD drafting, FEA, and CFD services. Email skd@bahuphala.com or call +91 97561 31050. Pune & Nashik, Maharashtra.",
+          "Contact Bahuphala Ventures for structural engineering, CAD drafting, FEA, and CFD services. Email skd@bahuphala.com or call +91 96571 31050. Pune & Nashik, Maharashtra.",
       },
-      { property: "og:title", content: "Contact Us — Bahuphala" },
+      { property: "og:title", content: "Contact Us — Bahuphala Ventures" },
       {
         property: "og:description",
         content:
-          "Contact Bahuphala for structural engineering, CAD drafting, FEA, and CFD services.",
+          "Contact Bahuphala Ventures for structural engineering, CAD drafting, FEA, and CFD services.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -44,8 +44,8 @@ const CONTACT_METHODS = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 97561 31050",
-    href: "tel:+919756131050",
+    value: "+91 96571 31050",
+    href: "tel:+919657131050",
   },
   {
     icon: MapPin,

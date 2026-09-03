@@ -17,23 +17,6 @@ const NAV_LINKS = [
   { label: "Contact", to: "/contact" },
 ] as const;
 
-function LogoMark({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      className={className}
-      fill="none"
-      aria-hidden="true"
-    >
-      <rect width="32" height="32" rx="6" className="fill-navy" />
-      <path
-        d="M9 23V9h5.2c2.6 0 4.3 1.6 4.3 4 0 1.8-1 3.1-2.5 3.6L19.4 23h-3l-3-5.7h-1.6V23H9Zm3-8.2h2c1 0 1.6-.5 1.6-1.3 0-.9-.6-1.3-1.6-1.3h-2v2.6Z"
-        className="fill-white"
-      />
-      <path d="M22 9h3v14h-3z" className="fill-steel-light" />
-    </svg>
-  );
-}
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -41,12 +24,13 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2.5" aria-label="Bahuphala home">
-          <LogoMark className="h-8 w-8" />
-          <span className="font-display text-lg font-bold tracking-tight text-navy">
-            Bahuphala
-          </span>
+      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Link to="/" className="flex items-center" aria-label="Bahuphala Ventures home">
+          <img
+            src="/logo.png"
+            alt="Bahuphala Ventures Pvt. Ltd."
+            className="h-11 sm:h-12 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -62,7 +46,7 @@ export function SiteHeader() {
                 className={cn(
                   "text-sm font-medium transition-colors",
                   isActive
-                    ? "text-navy"
+                    ? "font-semibold text-navy"
                     : "text-steel hover:text-navy",
                 )}
               >
@@ -72,10 +56,18 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden md:block">
-          <Button asChild size="lg" className="bg-navy text-white hover:bg-navy-deep">
+        <div className="hidden md:flex items-center gap-5">
+          <a
+            href="tel:+919657131050"
+            className="flex items-center gap-2 text-sm font-semibold text-navy transition-colors hover:opacity-80"
+          >
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-leaf/20 text-navy">
+              <Phone className="h-3.5 w-3.5 fill-navy text-navy" />
+            </div>
+            <span>+91 96571 31050</span>
+          </a>
+          <Button asChild size="default" className="bg-navy text-white hover:bg-navy-deep shadow-sm">
             <Link to="/contact">
-              <Phone className="h-4 w-4" />
               Talk to an Engineer
             </Link>
           </Button>
@@ -93,12 +85,13 @@ export function SiteHeader() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-80 border-border">
-            <div className="flex h-full flex-col gap-6 pt-8">
-              <div className="flex items-center gap-2.5">
-                <LogoMark className="h-8 w-8" />
-                <span className="font-display text-lg font-bold text-navy">
-                  Bahuphala
-                </span>
+            <div className="flex h-full flex-col gap-6 pt-6">
+              <div className="flex items-center">
+                <img
+                  src="/logo.png"
+                  alt="Bahuphala Ventures Pvt. Ltd."
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <nav className="flex flex-col gap-1">
                 {NAV_LINKS.map((link) => (
@@ -112,14 +105,22 @@ export function SiteHeader() {
                   </SheetClose>
                 ))}
               </nav>
-              <SheetClose asChild>
-                <Button asChild size="lg" className="mt-auto bg-navy text-white hover:bg-navy-deep">
-                  <Link to="/contact">
-                    <Phone className="h-4 w-4" />
-                    Talk to an Engineer
-                  </Link>
-                </Button>
-              </SheetClose>
+              <div className="mt-auto flex flex-col gap-3">
+                <a
+                  href="tel:+919657131050"
+                  className="flex items-center justify-center gap-2 rounded-md border border-border py-2.5 text-sm font-medium text-navy hover:bg-secondary"
+                >
+                  <Phone className="h-4 w-4 text-leaf" />
+                  +91 96571 31050
+                </a>
+                <SheetClose asChild>
+                  <Button asChild size="lg" className="bg-navy text-white hover:bg-navy-deep">
+                    <Link to="/contact">
+                      Talk to an Engineer
+                    </Link>
+                  </Button>
+                </SheetClose>
+              </div>
             </div>
           </SheetContent>
         </Sheet>
